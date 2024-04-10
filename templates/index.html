@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    
+</head>
+<body>
+    <div class="whole">
+        <nav>
+            <p>SAM, your personal  assistant!</p>
+
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            
+            <div  id="input_area">
+                <span>Start</span>
+                <button class="mic" onclick="location.href='{% url 'script' %}'"><img class="micimg" src="{% static 'mic.png' %}" alt=""></button>
+                <button class="exit" onclick="location.href='{% url 'pidkill' %}'"> <img src="{% static 'cross.png' %}" alt=""></button>
+                <span>Exit</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
